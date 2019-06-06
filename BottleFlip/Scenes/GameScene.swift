@@ -10,14 +10,14 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    var currentLevel: SKLabelNode!
-    var bestScore: SKLabelNode!
-    var pauseButton: SKSpriteNode!
-    var helpButton: SKSpriteNode!
+    var menuOptions: MenuOptions!
     
     override func didMove(to view: SKView) {
         print("Game Scene")
-        initializeGameView()
+        setUpHUD()
+        setUpBackground()
+        setUpLevel()
+        setUpBottle()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,12 +28,19 @@ class GameScene: SKScene {
         // Called before each frame is rendered
     }
     
-    private func initializeGameView() {
-        currentLevel = SKLabelNode(fontNamed: "")
-        bestScore = SKLabelNode(fontNamed: "")
-        pauseButton = SKSpriteNode(color: SKColor.orange, size: CGSize(width: 50, height: 50))
-        helpButton = SKSpriteNode(color: SKColor.cyan, size: CGSize(width: 50, height: 50))
+    private func setUpHUD() {
         
+    }
+    
+    private func setUpBackground() {
+        
+    }
+    
+    private func setUpLevel() {
+        
+    }
+    
+    private func setUpBottle() {
         
     }
 }

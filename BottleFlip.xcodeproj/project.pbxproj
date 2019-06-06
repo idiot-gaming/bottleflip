@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D58041A922A89F3700EB8C27 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58041A822A89F3700EB8C27 /* Constants.swift */; };
+		D58041AB22A8A0EA00EB8C27 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58041AA22A8A0EA00EB8C27 /* MenuOptions.swift */; };
 		D58BA5FB22A74335003F8146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BA5FA22A74335003F8146 /* AppDelegate.swift */; };
 		D58BA5FD22A74335003F8146 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D58BA5FC22A74335003F8146 /* GameScene.sks */; };
 		D58BA5FF22A74335003F8146 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D58BA5FE22A74335003F8146 /* Actions.sks */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D58041A822A89F3700EB8C27 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D58041AA22A8A0EA00EB8C27 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		D58BA5F722A74335003F8146 /* BottleFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58BA5FA22A74335003F8146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D58BA5FC22A74335003F8146 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -47,6 +51,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D58041A722A89F1100EB8C27 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D58BA60022A74335003F8146 /* GameScene.swift */,
+				D58BA61422A7488C003F8146 /* MainMenuScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D58041AC22A8A2DC00EB8C27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D58BA5FA22A74335003F8146 /* AppDelegate.swift */,
+				D58041A822A89F3700EB8C27 /* Constants.swift */,
+				D58BA60222A74335003F8146 /* GameViewController.swift */,
+				D58BA60422A74335003F8146 /* Main.storyboard */,
+				D58BA60C22A74336003F8146 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D58041AD22A8A35400EB8C27 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6B3B022A7A1E7002F107D /* Button.swift */,
+				D58041AA22A8A0EA00EB8C27 /* MenuOptions.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D58BA5EE22A74335003F8146 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +100,14 @@
 		D58BA5F922A74335003F8146 /* BottleFlip */ = {
 			isa = PBXGroup;
 			children = (
-				D58BA5FA22A74335003F8146 /* AppDelegate.swift */,
-				D58BA5FC22A74335003F8146 /* GameScene.sks */,
+				D58041AD22A8A35400EB8C27 /* Classes */,
+				D58041A722A89F1100EB8C27 /* Scenes */,
+				D58041AC22A8A2DC00EB8C27 /* Supporting Files */,
 				D58BA5FE22A74335003F8146 /* Actions.sks */,
+				D58BA5FC22A74335003F8146 /* GameScene.sks */,
 				D58BA61222A74860003F8146 /* MainMenuScene.sks */,
-				D58BA60022A74335003F8146 /* GameScene.swift */,
-				D58BA61422A7488C003F8146 /* MainMenuScene.swift */,
-				D58BA60222A74335003F8146 /* GameViewController.swift */,
-				D58BA60422A74335003F8146 /* Main.storyboard */,
 				D58BA60722A74336003F8146 /* Assets.xcassets */,
 				D58BA60922A74336003F8146 /* LaunchScreen.storyboard */,
-				D58BA60C22A74336003F8146 /* Info.plist */,
-				D5F6B3B022A7A1E7002F107D /* Button.swift */,
 			);
 			path = BottleFlip;
 			sourceTree = "<group>";
@@ -158,9 +188,11 @@
 			files = (
 				D5F6B3B122A7A1E7002F107D /* Button.swift in Sources */,
 				D58BA60122A74335003F8146 /* GameScene.swift in Sources */,
+				D58041AB22A8A0EA00EB8C27 /* MenuOptions.swift in Sources */,
 				D58BA60322A74335003F8146 /* GameViewController.swift in Sources */,
 				D58BA61522A7488C003F8146 /* MainMenuScene.swift in Sources */,
 				D58BA5FB22A74335003F8146 /* AppDelegate.swift in Sources */,
+				D58041A922A89F3700EB8C27 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
