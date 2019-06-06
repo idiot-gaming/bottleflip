@@ -64,10 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				D58BA5FA22A74335003F8146 /* AppDelegate.swift */,
-				D58041A822A89F3700EB8C27 /* Constants.swift */,
 				D58BA60222A74335003F8146 /* GameViewController.swift */,
 				D58BA60422A74335003F8146 /* Main.storyboard */,
-				D58BA60C22A74336003F8146 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -76,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F6B3B022A7A1E7002F107D /* Button.swift */,
+				D58041A822A89F3700EB8C27 /* Constants.swift */,
 				D58041AA22A8A0EA00EB8C27 /* MenuOptions.swift */,
 			);
 			path = Classes;
@@ -108,6 +107,7 @@
 				D58BA61222A74860003F8146 /* MainMenuScene.sks */,
 				D58BA60722A74336003F8146 /* Assets.xcassets */,
 				D58BA60922A74336003F8146 /* LaunchScreen.storyboard */,
+				D58BA60C22A74336003F8146 /* Info.plist */,
 			);
 			path = BottleFlip;
 			sourceTree = "<group>";

@@ -9,8 +9,8 @@
 import Foundation
 import SpriteKit
 
-struct ImageFile {
-    
+struct ImageName {
+    static let Background = "Background"
 }
 
 struct AudioFile {
@@ -31,3 +31,4 @@ struct PhysicsCategory {
 struct GameConfiguration {
     static let HoldToGrabBottle = false
 }
+
