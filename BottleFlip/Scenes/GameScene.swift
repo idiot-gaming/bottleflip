@@ -29,6 +29,11 @@ class GameScene: SKScene {
         
 //        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanFrom))
 //        view.addGestureRecognizer(panGestureRecognizer)
+        
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        longPressGestureRecognizer.minimumPressDuration = 0.5
+        longPressGestureRecognizer.numberOfTouchesRequired = 1
+        view.addGestureRecognizer(longPressGestureRecognizer)
     }
     
 //    @objc func swipeR(sender: UISwipeGestureRecognizer) {
@@ -39,6 +44,15 @@ class GameScene: SKScene {
 //        // Handle pan
 //        print("Just panned")
 //    }
+    
+    @objc func handleLongPress(sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            print("began press")
+        }
+        if sender.state == .ended {
+            print("end press")
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard dragStart == nil else {return}
@@ -64,6 +78,12 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        let angVel = bottle.physicsBody?.angularVelocity ?? 0
+        // print(angVel)
+        
+        if angVel >= 20 {
+            bottle.physicsBody?.angularVelocity = 20
+        }
     }
     
     private func flip(from: CGPoint, to: CGPoint, time: TimeInterval){
@@ -71,27 +91,28 @@ class GameScene: SKScene {
 //        print(to.y - from.y)
 //        print(1/time)
         
-        print(bottle.position.x)
-        print(bottle.position.y)
+        // print(bottle.position.x)
+        // print(bottle.position.y)
         
         let cgTime = CGFloat(1/time)
         
-        let flipVector = CGVector(dx: (to.x - from.x) * cgTime, dy: (to.y - from.y) * cgTime)
+        // let flipVector = CGVector(dx: (to.x - from.x) * cgTime, dy: (to.y - from.y) * cgTime)
         
         // bottle.physicsBody?.applyForce(flipVector, at: CGPoint(x: bottle.position.x, y: bottle.position.y - 10))
         
-        bottle.physicsBody?.applyTorque(20)
+        bottle.physicsBody?.applyTorque(cgTime * 5)
+        // bottle.physicsBody?.applyForce(flipVector)
         
-        var x = bottle.position.x
-        var y = bottle.position.y
-        
-        // If bottle is moving, disable user interaction with it
-        // Don't let users flip the bottle more than once
-        while(bottle.position.x != x && bottle.position.y != y){
-            bottle.isUserInteractionEnabled = false
-            x = bottle.position.x
-            y = bottle.position.y
-        }
+//        var x = bottle.position.x
+//        var y = bottle.position.y
+//
+//        // If bottle is moving, disable user interaction with it
+//        // Don't let users flip the bottle more than once
+//        while(bottle.position.x != x && bottle.position.y != y){
+//            bottle.isUserInteractionEnabled = false
+//            x = bottle.position.x
+//            y = bottle.position.y
+//        }
     }
     
     private func setUpHUD() {
